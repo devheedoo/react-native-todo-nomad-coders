@@ -26,8 +26,8 @@ export default class ToDo extends React.Component {
           {isEditing ? (
             <TextInput
               style={[
-                styles.input,
                 styles.text,
+                styles.input,
                 isCompleted ? styles.completedText : styles.uncompletedText
               ]}
               value={toDoValue}
@@ -44,12 +44,12 @@ export default class ToDo extends React.Component {
               {text}
             </Text>
           )}
-        </View>
+        </View> 
         { isEditing ? (
           <View style={styles.actions}>
             <TouchableOpacity onPressOut={this.finishEditing}>
               <View style={styles.actionContainer}>
-                <Text style={styles.actionText}>✅</Text>
+                <Text style={styles.actionText}>✔</Text>
               </View>
             </TouchableOpacity>
           </View>
@@ -135,8 +135,8 @@ const styles = StyleSheet.create({
   column: {
     flexDirection: 'row',
     alignItems: 'center',
-    width: width / 2,
-    justifyContent: 'space-between',
+    // width: width / 2,
+    // justifyContent: 'space-between',
   },
   actions: {
     flexDirection: 'row',
@@ -147,7 +147,8 @@ const styles = StyleSheet.create({
   },
   actionText: {},
   input: {
-    // marginVertical: 15,
     width: width / 2,
+    marginVertical: 15,
+    paddingBottom: 5,
   },
 })
